@@ -1,0 +1,332 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .h2 {
+    @apply text-left text-7xl leading-[1.2] font-bold;
+  }
+
+  .h3 {
+    @apply text-5xl font-bold;
+  }
+
+  .p {
+    @apply text-2xl;
+  }
+
+  .menu {
+    @apply hover:text-main focus:text-main transition duration-500;
+  }
+
+  .social-media {
+    @apply flex inline-flex justify-center items-center w-16 h-16 bg-transparent border border-solid border-main border-2 rounded-full text-3xl text-main my-12 transition duration-500 ease-linear  hover:bg-main hover:text-cinza-claro hover:shadow-custom;
+  }
+
+  .button {
+    @apply flex items-center justify-center py-4 px-12 bg-main rounded-[4rem] shadow-custom text-2xl text-cinza-claro font-medium tracking-wide transition ease-in duration-500 hover:shadow-none;
+  }
+
+  .container {
+    @apply flex flex-col gap-4 items-center justify-between px-12 pt-12 pb-16 rounded-[2rem] border-cinza border-4 bg-cinza-claro transition ease-in duration-500 hover:border-main hover:scale-[1.02];
+  }
+
+  .project-list-container {
+    @apply w-full flex flex-col gap-4 items-center justify-between px-12 pt-12 pb-16 rounded-[2rem] border-cinza-claro border-4 bg-cinza transition ease-in duration-500 hover:border-main hover:scale-[1.02];
+  }
+
+  /* BRUSH ANIMATION */
+
+  .stroke {
+    @apply w-[50%] h-2 -ml-[2.3rem] bg-[#038766] absolute left-1/2 bottom-1/4 -translate-x-1/2 rounded-xl;
+  }
+
+  .stroke::before {
+    @apply content-[''] absolute -bottom-1 -left-full w-full h-4 bg-cinza;
+    animation: line-animate 7s linear infinite;
+    animation-timing-function: cubic-bezier(0.75, 0.04, 0, 0.86);
+  }
+
+  .stroke::after {
+    @apply content-['\f1fc'] font-[fontAwesome] text-7xl text-main absolute bottom-0;
+    animation: brush-animate 7s linear infinite;
+    animation-timing-function: cubic-bezier(0.75, 0.04, 0, 0.86);
+  }
+
+  @keyframes line-animate {
+    0% {
+      left: 0;
+    }
+
+    20% {
+      left: 0;
+    }
+
+    40% {
+      left: 100%;
+    }
+
+    60% {
+      left: 0;
+    }
+
+    80% {
+      left: 0;
+    }
+
+    100% {
+      left: 0;
+    }
+  }
+
+  @keyframes brush-animate {
+    0% {
+      left: 50%;
+      bottom: 100%;
+      rotate: -10deg;
+    }
+    18% {
+      left: -10%;
+      rotate: 10deg;
+      bottom: 70%;
+    }
+    20%{
+      rotate: -15deg;
+    }
+    40% {
+      left: 95%;
+      
+    }
+    60% {
+      left: 0;
+    }
+
+    80% {
+      left: 50%;
+      bottom: 100%;
+    }
+
+    100% {
+      left: 50%;
+      rotate: -10deg;
+      bottom: 100%;
+    }
+  }
+
+  /* ?BRUSH ANIMATION */
+
+
+
+  /* FRONT-END ICON */
+
+  .left-arrow{
+    animation: left-arrow 5s linear infinite;
+  }
+
+  @keyframes left-arrow {
+    0% {
+      left: 33%;
+    }
+    15% {
+      left: -10%;
+    }
+    50% {
+      left: 45%;
+    }
+    75% {
+      left: 33%;
+    }
+    100% {
+      left: 33%;
+    }
+  }
+
+  .right-arrow{
+    animation: right-arrow 5s linear infinite;
+  }
+
+  @keyframes right-arrow {
+    0% {
+      right: 33%;
+    }
+    15% {
+      right: -10%;
+    }
+    50% {
+      right: 45%;
+    }
+    75% {
+      right: 33%;
+    }
+    100% {
+      right: 33%;
+    }
+    
+  }
+
+  .bar{
+    animation: bar 5s linear infinite;
+  }
+
+  @keyframes bar {
+
+    0% {
+      width: 0vh;
+    }
+
+    50% {
+      width: 0vh;
+    }
+    75% {
+      width: 6vh;
+    }
+    100% {
+      width: 6vh;
+    }
+    
+  }
+
+
+  /* /FRONT-END ICON ANIMATION */
+
+
+
+  /* GEAR ANIMATION */
+
+  .gear-1 {
+    animation: gear-1 10s linear infinite;
+  }
+
+  @keyframes gear-1 {
+    0% {
+      rotate: 60deg;
+    }
+
+    20% {
+      rotate: 120deg;
+    }
+
+    40% {
+      rotate: 180deg;
+    }
+
+    60% {
+      rotate: 240deg;
+    }
+
+    80% {
+      rotate: 300deg;
+    }
+
+    100% {
+      rotate: 360deg;
+    }
+  }
+
+  .gear-2 {
+    animation: gear-2 10s linear infinite;
+  }
+
+  @keyframes gear-2 {
+    0% {
+      rotate: -60deg;
+    }
+
+    20% {
+      rotate: -120deg;
+    }
+
+    40% {
+      rotate: -180deg;
+    }
+
+    60% {
+      rotate: -240deg;
+    }
+
+    80% {
+      rotate: -300deg;
+    }
+
+    100% {
+      rotate: -360deg;
+    }
+  }
+
+  /* /GEAR ANIMATION */
+
+  /* FULL-STACK ICON ANIMATION */
+
+  .full-stack-icon-1 {
+    animation: up-down-icon-1 1.5s linear infinite;
+  }
+
+  @keyframes up-down-icon-1 {
+    0% {
+      top: 40%;
+    }
+
+    50% {
+      top: 34%;
+    }
+
+    100% {
+      top: 40%;
+    }
+  }
+
+  .full-stack-icon-2 {
+    animation: up-down-icon-2 1.5s linear infinite;
+  }
+
+  @keyframes up-down-icon-2 {
+    0% {
+      top: 50%;
+    }
+
+    50% {
+      top: 44%;
+    }
+
+    100% {
+      top: 50%;
+    }
+  }
+
+  .full-stack-icon-3 {
+    animation: up-down-icon-3 1.5s linear infinite;
+  }
+
+  @keyframes up-down-icon-3 {
+    0% {
+      top: 60%;
+    }
+
+    50% {
+      top: 54%;
+    }
+
+    100% {
+      top: 60%;
+    }
+  }
+
+  /* /FULL-STACK ICON ANIMATION */
+
+  /* INPUT BOX */
+
+  .input-box{
+    @apply flex justify-between flex-wrap w-full
+  }
+
+  /* /INPUT BOX */
+
+  /* INPUT AND TEXTAREA */
+
+  .input-textarea{
+    @apply w-full p-6 text-white text-2xl bg-cinza-claro rounded-xl my-3
+  }
+
+
+  /* /INPUT AND TEXTAREA */
+}
